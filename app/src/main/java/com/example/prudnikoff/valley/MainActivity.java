@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        setUpListView();
     }
 
     @Override
@@ -77,5 +80,30 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void setUpListView() {
+        EventListElement[] elements = {
+                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventListElement("Java MeetUp+", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventListElement("Swift MeetUp", "#swift #apple", "01.07.2017", "Minsk", "free"),
+                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+        };
+        EventListAdapter adapter = new EventListAdapter(this, R.layout.element_row, elements);
+        ListView eventsListView = (ListView)findViewById(R.id.events_listView);
+        eventsListView.setAdapter(adapter);
     }
 }

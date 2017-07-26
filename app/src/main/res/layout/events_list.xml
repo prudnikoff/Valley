@@ -7,7 +7,7 @@
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:divider="@drawable/separator_line"
-        android:dividerHeight="20dp"
+        android:dividerHeight="15dp"
         android:layout_marginTop="?attr/actionBarSize"
         android:layout_alignParentTop="true" />
 </RelativeLayout>

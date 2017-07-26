@@ -6,9 +6,9 @@
     <shape xmlns:android="http://schemas.android.com/apk/res/android"
         android:shape="rectangle">
         <gradient
-            android:startColor="@color/colorPrimary"
+            android:startColor="@color/colorPrimaryLight"
             android:centerColor="@color/colorPrimaryLight"
-            android:endColor="@color/colorPrimaryDark"
+            android:endColor="@color/colorPrimaryLight"
             android:type="linear"
             android:angle="0">
         </gradient>

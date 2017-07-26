@@ -12,4 +12,6 @@
     <string name="the_world_of_it">The world of IT</string>
     <string name="action_sort">Sort</string>
     <string name="action_search">Search</string>
+    <string name="search_hint">Type event tag</string>
+    <string name="search">Search</string>
 </resources>

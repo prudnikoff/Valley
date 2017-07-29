@@ -8,13 +8,13 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-public class EventListAdapter extends ArrayAdapter<EventListElement> {
+public class EventAdapter extends ArrayAdapter<EventElement> {
 
     private Context context;
     private int resources;
-    private EventListElement[] events;
+    private EventElement[] events;
 
-    public EventListAdapter(Context context, int resources, EventListElement[] events) {
+    public EventAdapter(Context context, int resources, EventElement[] events) {
         super(context, resources, events);
         this.context = context;
         this.resources = resources;
@@ -22,7 +22,7 @@ public class EventListAdapter extends ArrayAdapter<EventListElement> {
     }
 
     @Override
-    public EventListElement getItem(int position) {
+    public EventElement getItem(int position) {
         return super.getItem(position);
     }
 
@@ -44,7 +44,7 @@ public class EventListAdapter extends ArrayAdapter<EventListElement> {
         } else {
             eventHolder = (EventHolder)row.getTag();
         }
-        EventListElement element = events[position];
+        EventElement element = events[position];
         eventHolder.nameTextView.setText(element.name);
         eventHolder.tagsTextView.setText(element.tags);
         eventHolder.dateTextView.setText(element.date);

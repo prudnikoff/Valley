@@ -2,7 +2,9 @@ package com.example.prudnikoff.valley;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -94,13 +96,13 @@ public class MainActivity extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         switch (id) {
             case R.id.nav_info: {
-
+                goInfoActivity();
             } break;
         }
 
@@ -110,21 +112,26 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void setUpListView() {
-        EventListElement[] elements = {
-                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
-                new EventListElement("Ruby Hackathon", "#ruby #rubyonrails", "20.07.2017", "Minsk", "free"),
-                new EventListElement("C++ Conference", "#c++ #c #arduino", "02.08.2017", "Moscow", "50$"),
-                new EventListElement("Java Day", "#java #android", "20.08.2017", "San Francisco", "free"),
-                new EventListElement("Apple WWDC", "#apple #iphone #ipad", "07.09.2017", "San Diego", "150$"),
-                new EventListElement("Android for developers", "#java #android #google", "15.09.2017", "Minsk", "free"),
-                new EventListElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
-                new EventListElement("Swift MeetUp", "#swift #apple", "20.09.2017", "Minsk", "free"),
-                new EventListElement("Ruby Hackathon", "#ruby #rubyonrails", "27.09.2017", "Minsk", "free"),
-                new EventListElement("C++ Conference", "#c++ #c #arduino", "02.10.2017", "Moscow", "70$"),
+        EventElement[] elements = {
+                new EventElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventElement("Ruby Hackathon", "#ruby #rubyonrails", "20.07.2017", "Minsk", "free"),
+                new EventElement("C++ Conference", "#c++ #c #arduino", "02.08.2017", "Moscow", "50$"),
+                new EventElement("Java Day", "#java #android", "20.08.2017", "San Francisco", "free"),
+                new EventElement("Apple WWDC", "#apple #iphone #ipad", "07.09.2017", "San Diego", "150$"),
+                new EventElement("Android for developers", "#java #android #google", "15.09.2017", "Minsk", "free"),
+                new EventElement("Java MeetUp", "#java #spring #javaFX", "15.07.2017", "New York", "25$"),
+                new EventElement("Swift MeetUp", "#swift #apple", "20.09.2017", "Minsk", "free"),
+                new EventElement("Ruby Hackathon", "#ruby #rubyonrails", "27.09.2017", "Minsk", "free"),
+                new EventElement("C++ Conference", "#c++ #c #arduino", "02.10.2017", "Moscow", "70$"),
         };
-        EventListAdapter adapter = new EventListAdapter(this, R.layout.element_row, elements);
+        EventAdapter adapter = new EventAdapter(this, R.layout.element_row, elements);
         ListView eventsListView = (ListView)findViewById(R.id.events_listView);
         eventsListView.setAdapter(adapter);
+    }
+
+    private void goInfoActivity() {
+        Intent intent = new Intent(this, InfoActivity.class);
+        startActivity(intent);
     }
 
     private void showSortPopUpMenu(View view) {

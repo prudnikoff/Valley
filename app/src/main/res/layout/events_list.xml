@@ -10,4 +10,5 @@
         android:dividerHeight="15dp"
         android:layout_marginTop="?attr/actionBarSize"
         android:layout_alignParentTop="true" />
+
 </RelativeLayout>

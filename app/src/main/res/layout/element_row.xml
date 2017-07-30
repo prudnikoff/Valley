@@ -42,13 +42,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="4"
-            android:layout_marginTop="25sp">
+            android:layout_marginTop="25dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:layout_marginBottom="5sp">
+                android:layout_marginBottom="5dp">
 
                 <ImageView
                     android:id="@+id/date_imageView"
@@ -60,7 +60,7 @@
                     android:id="@+id/date_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4sp"
+                    android:layout_marginTop="4dp"
                     android:text="15.07.2017"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -70,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:layout_marginBottom="5sp">
+                android:layout_marginBottom="5dp">
 
                 <ImageView
                     android:id="@+id/location_imageView"
@@ -82,7 +82,7 @@
                     android:id="@+id/location_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4sp"
+                    android:layout_marginTop="4dp"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="Minsk" />
 
@@ -104,7 +104,7 @@
                     android:id="@+id/admission_fee_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4sp"
+                    android:layout_marginTop="4dp"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="15$"
                     android:layout_weight="0.24" />

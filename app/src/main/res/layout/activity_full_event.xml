@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context="com.example.prudnikoff.valley.FullEventActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="20sp"
+                android:id="@+id/full_event_name_textView"
+                android:text="Java day"
+                android:textSize="30sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="20sp"
+                android:id="@+id/date_and_time_linearLayout"
+                android:layout_alignTop="@+id/location_and_admFee_linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5sp">
+
+                    <ImageView
+                        android:id="@+id/date_imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_date_range_black"/>
+
+                    <TextView
+                        android:id="@+id/date_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4sp"
+                        android:text="15.07.2017"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5sp">
+
+                    <ImageView
+                        android:id="@+id/time_imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_access_time"/>
+
+                    <TextView
+                        android:id="@+id/time_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4sp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="19:00 - 22:00" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="11dp"
+                android:id="@+id/location_and_admFee_linearLayout"
+                android:layout_below="@+id/full_event_name_textView"
+                android:layout_alignRight="@+id/full_event_description_textView"
+                android:layout_alignEnd="@+id/full_event_description_textView"
+                android:layout_marginRight="11dp"
+                android:layout_marginEnd="11dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5sp">
+
+                    <ImageView
+                        android:id="@+id/location_imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_location_on_black"/>
+
+                    <TextView
+                        android:id="@+id/location_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4sp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Minsk" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/admission_fee_imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_attach_money_black"/>
+
+                    <TextView
+                        android:id="@+id/admission_fee_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4sp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="15$"
+                        android:layout_weight="0.24" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/full_event_description_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:textSize="17sp"
+                android:background="@drawable/rounded_border"
+                android:layout_margin="10sp"
+                android:padding="17sp"
+                android:elevation="50sp"
+                android:text="Друзья, всем привет!
+
+А вот и долгожданный летний митап.
+
+Не смотря на погоду, мы приглашаем поучаствовать в обсуждении следующих тем:
+
+    «PHP: generics, строгая типизация массивов и ...»
+
+«Чаще всего доклады покрывают настоящее или прошлое разработки. Ради разнообразия заглянем немного еще и в будущее PHP.
+
+Generics RFC – почему их кто-то хочет? Магия ...
+
+Строго типизированные массивы уже сегодня».
+
+Александр Новиков (Senior Software Engineer, EPAM);
+
+    «Как начать контрибьютить в PHP»
+
+«Я расскажу о том, почему важно и интересно участвовать в open-source проектах и как внести свои изменения в исходный код PHP. Я расскажу о полном цикле «контрибьютинга» в PHP от выбора задачи до окончательного принятия и «мерджа» пулл риквеста».
+
+Andrew Nester (Software Engineer, PandaDoc).
+
+Ждем вас и ваше отличное настроение и желанием познавать новое."
+                android:layout_below="@+id/date_and_time_linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="35dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

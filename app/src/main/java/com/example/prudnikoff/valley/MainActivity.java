@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void goInfoActivity() {
-        Intent intent = new Intent(this, InfoActivity.class);
+        Intent intent = new Intent(this, FullEventActivity.class);
         startActivity(intent);
     }
 

@@ -104,6 +104,10 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_info: {
                 goInfoActivity();
             } break;
+            case R.id.nav_settings: {
+                Intent intent = new Intent(this, FullEventActivity.class);
+                startActivity(intent);
+            }
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -130,7 +134,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void goInfoActivity() {
-        Intent intent = new Intent(this, FullEventActivity.class);
+        Intent intent = new Intent(this, InfoActivity.class);
         startActivity(intent);
     }
 

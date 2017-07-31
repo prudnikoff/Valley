@@ -34,19 +34,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:id="@+id/date_linearLayout"
-                android:layout_alignTop="@+id/time_linearLayout"
+                android:id="@+id/full_date_linearLayout"
+                android:layout_alignTop="@+id/full_time_linearLayout"
                 android:layout_alignLeft="@+id/full_event_description_textView"
                 android:layout_alignStart="@+id/full_event_description_textView">
 
                 <ImageView
-                    android:id="@+id/date_imageView"
+                    android:id="@+id/full_date_imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_date_range_black" />
 
                 <TextView
-                    android:id="@+id/date_textView"
+                    android:id="@+id/ful_date_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -59,20 +59,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:id="@+id/time_linearLayout"
+                android:id="@+id/full_time_linearLayout"
                 android:layout_marginTop="30dp"
                 android:layout_below="@+id/full_event_name_textView"
                 android:layout_alignRight="@+id/full_event_description_textView"
                 android:layout_alignEnd="@+id/full_event_description_textView">
 
                 <ImageView
-                    android:id="@+id/time_imageView"
+                    android:id="@+id/full_time_imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_access_time"/>
 
                 <TextView
-                    android:id="@+id/time_textView"
+                    android:id="@+id/full_time_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -82,14 +82,26 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/location_textView"
+                android:id="@+id/full_location_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Minsk"
                 android:layout_marginTop="7dp"
                 android:layout_below="@+id/full_event_name_textView"
                 android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/full_admission_fee_textView"
+                android:layout_width="wrap_content"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="112dp"
+                android:textColor="@color/colorPrimary"
+                android:text="free" />
 
             <TextView
                 android:id="@+id/full_event_description_textView"
@@ -99,11 +111,10 @@
                 android:textSize="17sp"
                 android:background="@drawable/rounded_border"
                 android:padding="17dp"
-                android:layout_below="@+id/date_linearLayout"
+                android:layout_below="@+id/full_date_linearLayout"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginBottom="15dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:elevation="50dp"
@@ -131,7 +142,40 @@ Andrew Nester (Software Engineer, PandaDoc).
 
 Ждем вас и ваше отличное настроение и желанием познавать новое." />
 
+            <TextView
+                android:id="@+id/full_address_label_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:elevation="50dp"
+                android:layout_below="@+id/full_event_description_textView"
+                android:layout_centerHorizontal="true"
+                android:text="@string/address_label" />
+
+            <TextView
+                android:id="@+id/full_address_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textIsSelectable="true"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:elevation="50dp"
+                android:background="@drawable/rounded_border"
+                android:layout_below="@+id/full_address_label_textView"
+                android:layout_centerHorizontal="true"
+                android:text="Минск, ул. Фабрициуса 4, IMAGURU: Бизнес-Клуб/Startup Hub " />
+
         </RelativeLayout>
 
     </ScrollView>
+
 </RelativeLayout>

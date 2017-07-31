@@ -15,4 +15,5 @@
     <string name="search_hint">Type event tag</string>
     <string name="search">Search</string>
     <string name="app_info">App: Valley 1.0\nDevelopers: SoftM\nThe world of IT!</string>
+    <string name="address_label">Address</string>
 </resources>
